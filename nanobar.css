@@ -39,10 +39,11 @@
 }
 .nanobar .nanobar-progress {
   background: rgba(0,0,0,0.96);
+  box-shadow: 0 0 18px rgba(255,255,255,0.6);
   height: 100%;
   width: 0;
-  -webkit-transition: width .3s ease-in-out, height .1s ease-in-out .2s;
-  transition: width .3s ease-in-out, height .1s ease-in-out .2s;
+  -webkit-transition: width .3s linear, height .1s linear .2s;
+  transition: width .3s linear, height .1s linear .2s;
 }
 .nanobar .nanobar-progress-infinite {
   -webkit-animation: nanobar-infinite 2s infinite linear;
