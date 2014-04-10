@@ -1,0 +1,17 @@
+{
+  "name": "nanobar",
+  "repo": "yuehu/nanobar",
+  "description": "A progress bar at the very top of a webpage.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "nanobar.css"
+  ]
+}

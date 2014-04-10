@@ -1,0 +1,50 @@
+@-webkit-keyframes nanobar-infinite {
+  0 {
+    width: 0;
+    height: 100%;
+  }
+  86% {
+    width: 80%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 0;
+  }
+}
+
+@keyframes nanobar-infinite {
+  0 {
+    width: 0;
+    height: 100%;
+  }
+  86% {
+    width: 80%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 0;
+  }
+}
+
+.nanobar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(0,0,0,0.02);
+  clear: both;
+}
+.nanobar .nanobar-progress {
+  background: rgba(0,0,0,0.96);
+  height: 100%;
+  width: 0;
+  -webkit-transition: width .3s ease-in-out, height .1s ease-in-out .2s;
+  transition: width .3s ease-in-out, height .1s ease-in-out .2s;
+}
+.nanobar .nanobar-progress-infinite {
+  -webkit-animation: nanobar-infinite 2s infinite linear;
+  animation: nanobar-infinite 2s infinite linear;
+}
