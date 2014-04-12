@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nanobar</title>
+  <link rel="stylesheet" href="nanobar.css">
+  <script src="build/build.js"></script>
+  <style>
+    .container {
+      margin: 0 auto;
+      padding: 60px 0;
+      max-width: 860px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="buttons">
+      <button data-percent="30">nanobar.go(30)</button>
+      <button data-percent="60">nanobar.go(60)</button>
+      <button data-percent="100">nanobar.go(100)</button>
+      <button>nanobar.infinite()</button>
+    </div>
+  </div>
+  <script>
+    var Nanobar = require('nanobar');
+    var nanobar = new Nanobar();
+    nanobar.go(10);
+    (function() {
+      var buttons = document.getElementsByTagName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        (function(button) {
+          button.onclick = function() {
+            var percent = button.getAttribute('data-percent');
+            if (percent) {
+              nanobar.go(percent);
+            } else {
+              nanobar.infinite();
+            }
+          };
+        })(buttons[i]);
+      }
+    })();
+  </script>
+</body>
+</html>
