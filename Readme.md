@@ -2,6 +2,8 @@
 
 A progress bar at the very top of a webpage.
 
+VIEW DEMO: <http://yuehu.github.io/nanobar/>
+
 ## Installation
 
 Install with [component(1)](http://component.io):
