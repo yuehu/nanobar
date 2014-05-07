@@ -28,7 +28,7 @@
   }
 }
 
-.nanobar {
+#nanobar {
   position: fixed;
   top: 0;
   left: 0;
@@ -37,7 +37,7 @@
   background: rgba(0,0,0,0.02);
   clear: both;
 }
-.nanobar .nanobar-progress {
+#nanobar .nanobar-progress {
   background: rgba(0,0,0,0.96);
   box-shadow: 0 0 18px rgba(255,255,255,0.6);
   height: 100%;
@@ -45,7 +45,7 @@
   -webkit-transition: width .3s linear, height .1s linear .2s;
   transition: width .3s linear, height .1s linear .2s;
 }
-.nanobar .nanobar-progress-infinite {
+#nanobar .nanobar-progress-infinite {
   -webkit-animation: nanobar-infinite 2s infinite linear;
   animation: nanobar-infinite 2s infinite linear;
 }

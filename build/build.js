@@ -207,8 +207,11 @@ require.register("nanobar/index.js", function(exports, require, module){
  */
 
 function Nanobar(options) {
-  var el = document.createElement('div');
-  el.className = 'nanobar';
+  var el = document.getElementById('nanobar');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'nanobar';
+  }
   var bar = document.createElement('div');
   bar.className = 'nanobar-progress';
   el.appendChild(bar);
