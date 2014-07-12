@@ -9,6 +9,10 @@ function Nanobar(options) {
   if (!el) {
     el = document.createElement('div');
     el.id = 'nanobar';
+    // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
+    el.setAttribute('role', 'progressbar');
+    el.setAttribute('aria-valuemin', 0);
+    el.setAttribute('aria-valuemax', 100);
   }
   var bar = document.createElement('div');
   bar.className = 'nanobar-progress';
@@ -26,6 +30,9 @@ Nanobar.prototype.go = function(percent) {
 
   bar.className = 'nanobar-progress';
   bar.style.width = percent + '%';
+
+  // Aria supports
+  this.el.setAttribute('aria-valuenow', percent);
 
   if (percent >= 100) {
     bar.style.height = '0';
